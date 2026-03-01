@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=15552000; includeSubDomains">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+    
+    <!-- CSP – صارمة لمنع XSS وتحميل موارد خارجية غير مرغوبة -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        connect-src 'self';
+        frame-ancestors 'none';
+    ">
+    
     <title>Centralities.com | The Mathematical Epicenter of Influence</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <meta property="og:title" content="Centralities.com – Premium Domain for Sale">
+    <meta property="og:description" content="Sovereign .com domain defining centrality in AI, DeFi, and Network Intelligence. Secure escrow transaction via Escrow.com.">
+    <meta property="og:image" content="https://centralities.com/og-image.jpg"> <!-- أضف صورة OG مناسبة -->
+    <meta property="og:url" content="https://centralities.com">
     
     <style>
         :root {
@@ -17,12 +41,7 @@
             --glass-border: rgba(255, 255, 255, 0.1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: 'Inter', sans-serif;
             background: #050505;
@@ -31,24 +50,17 @@
             line-height: 1.6;
         }
 
-        /* تحسين الخلفية مع الصورة المرفقة */
         .hero-bg {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('background.png') no-repeat center center/cover;
+            inset: 0;
+            background: url('background.webp') no-repeat center/cover; /* استخدم webp للأداء */
             z-index: -2;
         }
 
         .overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%);
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.88) 100%);
             z-index: -1;
         }
 
@@ -64,94 +76,99 @@
             text-align: center;
         }
 
-        /* العلامة التجارية كأصل استراتيجي */
         .brand {
             font-weight: 900;
-            font-size: clamp(2.5rem, 8vw, 5.5rem);
-            letter-spacing: -2px;
+            font-size: clamp(2.8rem, 9vw, 6rem);
+            letter-spacing: -2.5px;
             background: linear-gradient(to bottom, #fff 40%, #ccc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-            filter: drop-shadow(0 0 30px rgba(138, 43, 226, 0.3));
+            margin-bottom: 8px;
+            filter: drop-shadow(0 0 35px rgba(138,43,226,0.35));
         }
 
         .tagline {
             font-weight: 300;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: 6px;
             color: var(--accent-blue);
-            margin-bottom: 40px;
-            opacity: 0.9;
+            margin-bottom: 45px;
+            opacity: 0.92;
         }
 
-        /* كرت العرض الاحترافي */
         .offer-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(15px);
+            backdrop-filter: blur(18px);
             border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 50px;
-            max-width: 700px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            border-radius: 28px;
+            padding: 45px 35px;
+            max-width: 720px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.55);
         }
 
         .description {
-            font-size: 1.15rem;
-            color: #d1d1d1;
-            margin-bottom: 30px;
+            font-size: 1.18rem;
+            color: #d4d4d4;
+            margin-bottom: 35px;
+        }
+
+        .escrow-trust {
+            font-size: 1rem;
+            color: #a0d0ff;
+            margin: 25px 0;
+            padding: 15px;
+            border: 1px solid rgba(0,212,255,0.2);
+            border-radius: 12px;
+            background: rgba(0,212,255,0.03);
         }
 
         .strategic-points {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
             text-align: left;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
         .point {
-            font-size: 0.9rem;
-            padding: 10px;
-            border-left: 2px solid var(--primary-glow);
-            background: rgba(255,255,255,0.02);
+            font-size: 0.95rem;
+            padding: 12px 16px;
+            border-left: 3px solid var(--primary-glow);
+            background: rgba(255,255,255,0.025);
+            border-radius: 8px;
         }
 
-        /* زر التواصل الآمن */
         .cta-button {
             display: inline-block;
-            padding: 20px 45px;
-            background: #fff;
-            color: #000;
+            padding: 18px 50px;
+            background: #ffffff;
+            color: #000000;
             text-decoration: none;
             font-weight: 700;
             border-radius: 50px;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-            border: 2px solid transparent;
+            transition: all 0.35s ease;
+            font-size: 1.15rem;
+            border: 2px solid #ffffff;
+            box-shadow: 0 8px 25px rgba(255,255,255,0.12);
         }
 
         .cta-button:hover {
             background: transparent;
-            color: #fff;
-            border-color: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+            color: #ffffff;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(255,255,255,0.18);
         }
 
         .footer {
-            margin-top: 50px;
-            font-size: 0.8rem;
-            opacity: 0.5;
-        }
-
-        /* حماية بسيطة ضد نسخ البريد الإلكتروني آلياً */
-        .email-protection::after {
-            content: "agent" attr(data-domain);
+            margin-top: 60px;
+            font-size: 0.82rem;
+            opacity: 0.55;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
+            .offer-card { padding: 35px 25px; }
             .strategic-points { grid-template-columns: 1fr; }
         }
     </style>
@@ -170,35 +187,40 @@
         <main class="offer-card">
             <p class="description">
                 In a hyper-connected world, <strong>Centrality</strong> is the metric of dominance. 
-                This sovereign domain is a category-defining asset for the next generation of AI, DeFi, and Data Intelligence.
+                This sovereign .com domain is a category-defining strategic asset for the next generation of AI, DeFi, Network Intelligence, and Data-Driven Influence.
             </p>
 
             <div class="strategic-points">
                 <div class="point">AI & Neural Architectures</div>
                 <div class="point">DeFi Governance Hubs</div>
                 <div class="point">Network Analytics Mastery</div>
-                <div class="point">Influence Mapping</div>
+                <div class="point">Influence Mapping & Centrality Optimization</div>
             </div>
 
-            <a href="mailto:agent@sohadot.com" class="cta-button">
-                Inquire via Sovereign Domain Assets
+            <div class="escrow-trust">
+                <strong>100% Secure Transaction via Escrow.com</strong><br>
+                All acquisitions protected by Escrow.com – the global standard for high-value domain transfers (trusted by leading brokers with $billions in secured sales). Funds held until domain is fully transferred. Buyer & Seller fully protected. No direct payments accepted.
+            </div>
+
+            <a href="mailto:agent@sohadot.com?subject=Inquiry%20for%20Centralities.com" class="cta-button">
+                Inquire Confidentially – Secure Escrow Process
             </a>
             
-            <p style="margin-top: 20px; font-size: 0.8rem; color: #888;">
-                Strictly for institutional visionaries and strategic acquirers.
+            <p style="margin-top: 25px; font-size: 0.85rem; color: #aaa;">
+                Strictly for institutional visionaries, strategic acquirers, and verified entities only.
             </p>
         </main>
 
         <footer class="footer">
-            &copy; 2026 Secured Transaction via sohadot.com | Strategic Asset Acquisition
+            © 2026 | Secured via sohadot.com – All Transactions Escrow-Protected | Strategic Asset Acquisition
         </footer>
     </div>
 
     <script>
+        // Frame-buster (حماية إضافية ضد clickjacking)
         if (window.top !== window.self) {
             window.top.location = window.self.location;
         }
-        console.log("Centralities.com: Secure Strategic Asset");
     </script>
 </body>
 </html>
