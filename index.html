@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <title>Centralities.com | The Mathematical Epicenter of Influence</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-glow: #8a2be2;
+            --accent-blue: #00d4ff;
+            --text-main: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #050505;
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* تحسين الخلفية مع الصورة المرفقة */
+        .hero-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('background.png') no-repeat center center/cover;
+            z-index: -2;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* العلامة التجارية كأصل استراتيجي */
+        .brand {
+            font-weight: 900;
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            letter-spacing: -2px;
+            background: linear-gradient(to bottom, #fff 40%, #ccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 30px rgba(138, 43, 226, 0.3));
+        }
+
+        .tagline {
+            font-weight: 300;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--accent-blue);
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* كرت العرض الاحترافي */
+        .offer-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 50px;
+            max-width: 700px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
+
+        .description {
+            font-size: 1.15rem;
+            color: #d1d1d1;
+            margin-bottom: 30px;
+        }
+
+        .strategic-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .point {
+            font-size: 0.9rem;
+            padding: 10px;
+            border-left: 2px solid var(--primary-glow);
+            background: rgba(255,255,255,0.02);
+        }
+
+        /* زر التواصل الآمن */
+        .cta-button {
+            display: inline-block;
+            padding: 20px 45px;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #fff;
+            border-color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        /* حماية بسيطة ضد نسخ البريد الإلكتروني آلياً */
+        .email-protection::after {
+            content: "agent" attr(data-domain);
+        }
+
+        @media (max-width: 768px) {
+            .strategic-points { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-bg"></div>
+    <div class="overlay"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="brand">Centralities</h1>
+            <p class="tagline">The Mathematical Epicenter of Influence</p>
+        </header>
+
+        <main class="offer-card">
+            <p class="description">
+                In a hyper-connected world, <strong>Centrality</strong> is the metric of dominance. 
+                This sovereign domain is a category-defining asset for the next generation of AI, DeFi, and Data Intelligence.
+            </p>
+
+            <div class="strategic-points">
+                <div class="point">AI & Neural Architectures</div>
+                <div class="point">DeFi Governance Hubs</div>
+                <div class="point">Network Analytics Mastery</div>
+                <div class="point">Influence Mapping</div>
+            </div>
+
+            <a href="mailto:agent@sohadot.com" class="cta-button">
+                Inquire via Sovereign Domain Assets
+            </a>
+            
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #888;">
+                Strictly for institutional visionaries and strategic acquirers.
+            </p>
+        </main>
+
+        <footer class="footer">
+            &copy; 2026 Secured Transaction via sohadot.com | Strategic Asset Acquisition
+        </footer>
+    </div>
+
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.self.location;
+        }
+        console.log("Centralities.com: Secure Strategic Asset");
+    </script>
+</body>
+</html>
